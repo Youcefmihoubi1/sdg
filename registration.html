@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSL | Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div id="app" class="w-full max-w-md p-6 bg-white shadow-lg rounded-lg">
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-700">Registration</h2>
+    <form @submit.prevent="submitForm" class="space-y-4">
+      <div>
+        <label class="block mb-1 font-medium">Full Name</label>
+        <input v-model="form.name" type="text" required class="w-full border rounded px-3 py-2" placeholder="Your full name" />
+      </div>
+
+      <div>
+        <label class="block mb-1 font-medium">Email Address</label>
+        <input v-model="form.email" type="email" required class="w-full border rounded px-3 py-2" placeholder="your@email.com" />
+      </div>
+
+      <div>
+        <label class="block mb-1 font-medium">Phone Number</label>
+        <input
+          v-model="form.phone"
+          type="tel"
+          required
+          class="w-full border rounded px-3 py-2"
+          placeholder="+2135xxxxxxxx"
+          pattern="^\+213[5-7]\d{8}$"
+          title="Phone number must start with +2135, +2136, or +2137 and be 13 digits long"
+        />
+      </div>
+
+      <div>
+        <label class="block mb-1 font-medium">Select Workshop</label>
+        <select v-model="form.workshop" required class="w-full border rounded px-3 py-2">
+          <option value="" disabled selected>Select one</option>
+          <option>Entrepreneurship by NASDA</option>
+          <option>Web Dev Basics by Younes Rouabech</option>
+          <option>Advanced Web Dev by Abderaouf Hechaichi</option>
+          <option>Linux & Mobile Dev by Brahim Mihoubi</option>
+          <option>Networks by Hamza Benchelli</option>
+          <option>Cybersecurity by Amine Dif</option>
+          <option>AI by GDG</option>
+          <option>Languages FR EN DE by Emercia School & MBI Campus</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block mb-1 font-medium">Registration Type</label>
+        <div class="flex gap-4">
+          <label><input type="radio" v-model="form.type" value="Presentiel" required /> Presentiel</label>
+          <label><input type="radio" v-model="form.type" value="En ligne" required /> En ligne</label>
+        </div>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+        Submit
+      </button>
+    </form>
+
+    <div v-if="submitted" class="mt-4 p-3 bg-green-100 border border-green-400 rounded text-green-700">
+      ✔ Registration submitted successfully!
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          form: {
+            name: '',
+            email: '',
+            phone: '',
+            workshop: '',
+            type: ''
+          },
+          submitted: false
+        };
+      },
+      methods: {
+        submitForm() {
+          // You can send `this.form` to a server here
+          this.submitted = true;
+          console.log(this.form);
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
