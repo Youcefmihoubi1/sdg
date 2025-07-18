@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,26 @@
     <link rel="icon" href="sdg.png">
     <title>SDG | Skill Lab</title>
 </head>
-<body class="bg-gray-50 min-h-screen flex flex-col justify-center w-full">
-    <div id="app" class="container flex flex-col min-h-screen mx-auto px-4">
+
+<body class="bg-gray-50 overflow-x-hidden">
+    <div id="app" class="flex justify-center w-auto max-w-full flex-col flex-grow min-h-screen">
         <!---HEADER---->
-        <header class="bg-gray-900 w-full top-0 z-20 sticky flex flex-row">
-            <a href="/">
-                <h1 class="text-blue-500 font-semibold text-2xl p-4">
-                    <p>SDG
-                        <span class="text-white">SKILL LAB</span>
-                    </p>
+        <header class="bg-gray-900 w-full p-4 flex flex-row sticky z-0">
+            <a href="/ " class="flex flex-row">
+                <img src="sdg.png" alt="" class="w-12" />
+                <h1 class="text-xl font-semibold text-blue-500 mt-2">
+                    SDG
+                    <span class="text-white">SKILL LAB</span>
                 </h1>
             </a>
         </header>
         <!---HERO---->
         <section id="hero" class="flex-grow">
             <div class="relative bg-cover bg-center h-[80vh]" style="background-image: url('hero.jpg');">
-                <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white text-center px-4">
-                    <h1 class="text-4xl sm:text-5xl font-semibold mb-4">SDG Skill Lab</h1>
-                    <p class="text-lg sm:text-xl mb-6">15 / 08 / 2025</p>
+                <div
+                    class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white text-center px-4">
+                    <h1 class="text-3xl font-semibold mb-4">SDG Skill Lab</h1>
+                    <p class="text-base mb-6">15 / 08 / 2025</p>
                     <div class="flex flex-row">
                         <div class="text-center w-20">
                             <span id="w">00</span>
@@ -48,7 +51,9 @@
                             <div class="text-xs sm:text-sm">Seconds</div>
                         </div>
                     </div>
-                    <a href="" class="bg-blue-800 rounded shadow p-2 text-white text-center mt-10 w-40 hover:bg-blue-900 hover:shadow-lg">Register Now</a>
+                    <a href=""
+                        class="bg-blue-800 rounded shadow p-2 text-white text-center mt-10 w-40 hover:bg-blue-900 hover:shadow-lg">Register
+                        Now</a>
                 </div>
             </div>
         </section>
@@ -56,7 +61,8 @@
         <section id="about" class="py-16 bg-white text-center">
             <div class="container mx-auto px-4 max-w-3xl fade-in">
                 <h2 class="text-3xl font-bold mb-6">About SSL</h2>
-                <p class="text-lg mb-6">SDG Skill Lab (SSL) is an IT-focused event filled with interactive activities and professional development opportunities.</p>
+                <p class="text-lg mb-6">SDG Skill Lab (SSL) is an IT-focused event filled with interactive activities
+                    and professional development opportunities.</p>
                 <ul class="list-disc list-inside text-left mx-auto max-w-xl text-lg space-y-2">
                     <li>Workshops</li>
                     <li>Short Competitions and Gifts</li>
@@ -94,7 +100,9 @@
 
         <section class="max-w-6xl mx-auto px-4 py-12">
             <div class="container mx-auto px-4">
-                <div class="text-center"><h2 class="text-4xl font-bold mb-12">Event Schedule</h2></div>
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-12">Event Schedule</h2>
+                </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Week 1 -->
                     <div class="bg-white shadow rounded-2xl p-6 border-t-4 border-blue-600">
@@ -165,10 +173,18 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-bold mb-12">Our Partners</h2>
                 <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12">
-                    <img src="telecom.png" alt="Partner 1" class="h-16 sm:h-20 hover:scale-105 transition duration-300 ease-in-out rounded-full" loading="lazy">
-                    <img src="gdg.jpg" alt="Partner 2" class="h-16 sm:h-20 hover:scale-105 transition duration-300 ease-in-out rounded-full" loading="lazy">
-                    <img src="redjem.jpeg" alt="Partner 3" class="h-16 sm:h-20 hover:scale-105 transition duration-300 ease-in-out rounded-full" loading="lazy">
-                    <img src="mercia.jpg" alt="Partner 4" class="h-16 sm:h-20 hover:scale-105 transition duration-300 ease-in-out rounded-full" loading="lazy">
+                    <img src="telecom.png" alt="Partner 1"
+                        class="h-16 sm:h-20 hover:scale-105 transition duration-300 ease-in-out rounded-full"
+                        loading="lazy">
+                    <img src="gdg.jpg" alt="Partner 2"
+                        class="h-16 sm:h-20 hover:scale-105 transition duration-300 ease-in-out rounded-full"
+                        loading="lazy">
+                    <img src="redjem.jpeg" alt="Partner 3"
+                        class="h-16 sm:h-20 hover:scale-105 transition duration-300 ease-in-out rounded-full"
+                        loading="lazy">
+                    <img src="mercia.jpg" alt="Partner 4"
+                        class="h-16 sm:h-20 hover:scale-105 transition duration-300 ease-in-out rounded-full"
+                        loading="lazy">
                 </div>
             </div>
         </section>
@@ -259,4 +275,5 @@
     });
     app.mount("#app");
 </script>
+
 </html>
